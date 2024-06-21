@@ -6,7 +6,7 @@
 #    By: ldevy <ldevy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/03 15:27:12 by ldevy             #+#    #+#              #
-#    Updated: 2021/12/13 21:19:50 by ldevy            ###   ########.fr        #
+#    Updated: 2024/06/19 20:11:26 by ldevy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ bonus: ${OBJ} ${OBJ_BONUS}
 	ar -rcs ${NAME} ${OBJ} ${OBJ_BONUS}
 	
 .c.o:
-	${CC} ${FLAGS} -I includes -c $< -o ${<:.c=.o}
+	@${CC} ${FLAGS} -I includes -c $< -o ${<:.c=.o}
 
 clean: 
 	rm -f ${OBJ} ${OBJ_BONUS}
